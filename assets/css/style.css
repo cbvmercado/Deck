@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Oswald:wght@300;400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  color: #000;
+}
+
+body p {
+  color: #1d1f24;
+  font-family: "Lato", sans-serif;
+  line-height: 1.7;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+}
+
+/*NAV */
+
+.logo {
+  margin-right: 100px;
+}
+
+.logo a {
+  font-weight: 700;
+  font-size: 24px;
+  color: #000;
+  text-decoration: none;
+}
+
+.logo h3 {
+  font-family: "Lato", sans-serif;
+}
+
+.logo span.red {
+  color: red;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 40px;
+  height: 90px;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.nav-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.nav-links {
+  padding: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 57%;
+}
+
+.nav-links a {
+  color: #1d1f24;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.03cm;
+}
+
+.nav-links a:hover {
+  text-decoration: none;
+  border-bottom: 2px solid #000;
+  padding-bottom: 2px;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+/* Hero */
+
+.hero h1 {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 68px;
+}
+
+.hero {
+  height: 440px;
+  background-color: #f6f2ef;
+}
+
+.hero-content {
+  margin: 125px 0;
+  width: 550px;
+}
+
+.hero .author {
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  color: #ff565c;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.03cm;
+}
+
+/* SECTION 2 */
+
+.section2 p {
+  margin: 25px 0;
+}
+
+.section2 p.intro {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.section2 li {
+  list-style-type: none;
+}
+
+.section2 li > span.heading {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 28px;
+  margin-left: -40px;
+}
+
+.section2 ol {
+  counter-reset: listCounter;
+  line-height: 30px;
+}
+.section2 li {
+  counter-increment: listCounter;
+}
+
+.section2 li::before {
+  font-size: 14px;
+  margin-left: -60px;
+  margin-right: 65px;
+  color: red;
+  content: counter(listCounter);
+  border: 2px red solid;
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  text-align: center;
+}
+
+.section2 img {
+  height: 560px;
+  width: 1300px;
+  object-fit: cover;
+  margin: 50px auto;
+}
+
+/* SECTION 3 */
+
+.section3 .author-name {
+  text-transform: uppercase;
+  font-family: "Oswald", "sans-serif";
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.section3 .author-caption {
+  color: #1d1f24;
+  font-size: 14px;
+}
+
+.section3 h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .hero {
+    height: autopx;
+  }
+  .hero-content {
+    width: auto;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+}
